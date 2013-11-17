@@ -1,0 +1,45 @@
+<%= form_for(@lot_type) do |f| %>
+  <% if @lot_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lot_type.errors.count, "error") %> prohibited this lot_type from being saved:</h2>
+
+      <ul>
+      <% @lot_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lot_type_desc %><br />
+    <%= f.text_field :lot_type_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :rate %><br />
+    <%= f.text_field :rate %>
+  </div>
+  <div class="field">
+    <%= f.label :numspots %><br />
+    <%= f.number_field :numspots %>
+  </div>
+  <div class="field">
+    <%= f.label :startdate %><br />
+    <%= f.datetime_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :enddate %><br />
+    <%= f.datetime_select :enddate %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br />
+    <%= f.number_field :location_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

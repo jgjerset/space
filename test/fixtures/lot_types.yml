@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  description: MyString
+  rate: 9.99
+  numspots: 1
+  startdate: 2013-11-15 15:13:56
+  enddate: 2013-11-15 15:13:56
+
+two:
+  type: 
+  description: MyString
+  rate: 9.99
+  numspots: 1
+  startdate: 2013-11-15 15:13:56
+  enddate: 2013-11-15 15:13:56

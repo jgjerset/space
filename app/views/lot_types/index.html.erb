@@ -1,0 +1,33 @@
+<h1>Listing lot_types</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Rate</th>
+    <th>Numspots</th>
+    <th>Startdate</th>
+    <th>Enddate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lot_types.each do |lot_type| %>
+  <tr>
+    <td><%= lot_type.lot_type_desc %></td>
+    <td><%= lot_type.description %></td>
+    <td><%= lot_type.rate %></td>
+    <td><%= lot_type.numspots %></td>
+    <td><%= lot_type.startdate %></td>
+    <td><%= lot_type.enddate %></td>
+    <td><%= link_to 'Show', lot_type %></td>
+    <td><%= link_to 'Edit', edit_lot_type_path(lot_type) %></td>
+    <td><%= link_to 'Destroy', lot_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lot type', new_lot_type_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @lot_type.lot_type_desc %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @lot_type.description %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= @lot_type.rate %>
+</p>
+
+<p>
+  <b>Numspots:</b>
+  <%= @lot_type.numspots %>
+</p>
+
+<p>
+  <b>Startdate:</b>
+  <%= @lot_type.startdate %>
+</p>
+
+<p>
+  <b>Enddate:</b>
+  <%= @lot_type.enddate %>
+</p>
+
+<p>
+  <b>Location ID:</b>
+  <%= @lot_type.location_id %>
+</p>
+
+<%= link_to 'Edit', edit_lot_type_path(@lot_type) %> |
+<%= link_to 'Back', location_path(@lot_type.location) %>
