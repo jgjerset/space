@@ -4,6 +4,7 @@ class LocationsController < ApplicationController
   def index
     @locations = Location.all
 
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @locations }
@@ -14,7 +15,8 @@ class LocationsController < ApplicationController
   # GET /locations/1.json
   def show
     @location = Location.find(params[:id])
-
+    @lot_types = @location.lot_types
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @location }

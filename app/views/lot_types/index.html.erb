@@ -21,13 +21,13 @@
     <td><%= lot_type.numspots %></td>
     <td><%= lot_type.startdate %></td>
     <td><%= lot_type.enddate %></td>
-    <td><%= link_to 'Show', lot_type %></td>
-    <td><%= link_to 'Edit', edit_lot_type_path(lot_type) %></td>
-    <td><%= link_to 'Destroy', lot_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', location_lot_type_path(@location, lot_type) %></td>
+    <td><%= link_to 'Edit', edit_location_lot_type_path(@location, lot_type)  %></td>
+    <td><%= link_to 'Destroy', [@location,lot_type], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Lot type', new_lot_type_path %>
+<%= link_to 'New Lot type', new_location_lot_type_path(@location) %>

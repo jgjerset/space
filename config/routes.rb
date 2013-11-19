@@ -1,7 +1,8 @@
 Space::Application.routes.draw do
   
-  resources :locations 
-  resources :lot_types
+  resources :locations do
+     resources :lot_types
+  end
   
 
   # The priority is based upon order of creation:
