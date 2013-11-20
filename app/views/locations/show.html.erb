@@ -29,7 +29,7 @@
   <b>Lot Type:</b>
 
   <% @lot_types.each do | lot_type | %>
-       <li><%= link_to lot_type.description, lot_type %> - <%= lot_type.rate%></li>
+       <li><%= link_to lot_type.description, location_lot_type_path(@location, lot_type) %> - <%= lot_type.rate%></li>
 
   <% end %>
 </p>

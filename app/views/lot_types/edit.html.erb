@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @lot_type %> |
-<%= link_to 'Back', lot_types_path %>
+<%= link_to 'Show', location_lot_type_path(@location, @lot_type) %> |
+<%= link_to 'Back', location_lot_types_path(@location) %>
